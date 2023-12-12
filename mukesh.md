@@ -4362,7 +4362,6 @@ postgres=#
 
 **Step 34:-**
 
-
 ~~~
 podman run -itd --name loadtesting -p 8089:8089 -v /home/m/locust:/mnt/locust localhost/loadtest:v1 -f /mnt/locust/locustfile.py --timescale --grafana-url=http://192.168.122.29:3000 --pghost=192.168.122.29 --pgport=5432 --pgpassword=password --pguser=postgres
 ~~~
@@ -4382,13 +4381,13 @@ Locust ui exposed to the localhost:8089 Start a new test with the number of user
 ![](locustvi.png)
 
 **Step 36:-**
+
 You can add panels in grafana to get the graphical view of the responses.
 
 ![](grafana.png)
 
 
 #### OUTPUT
-
 ~~~
 m@k:~$ 
 m@k:~$ podman run -itd --name loadtesting -p 8089:8089 -v /home/m/locust:/mnt/locust localhost/loadtest:v1 -f /mnt/locust/locustfile.py --timescale --grafana-url=http:/192.168.122.106:3000 --pghost=192.168.122.106 --pgport=5432 --pgpassword=password --pguser=postgres
