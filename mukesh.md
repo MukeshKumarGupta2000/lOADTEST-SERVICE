@@ -4260,12 +4260,12 @@ Processing 15419: *   Trying 192.168.122.106:3000...
 {"uid":"fnu5nkF7z","pluginId":"","title":"Locust Scatter plot","imported":true,"importedUri":"db/locust-scatter-plot","importedUrl":"/d/fnu5nkF7z/locust-scatter-plot","slug":"locust-scatter-plot","dashboardId":4,"folderId":0,"importedRevision":1,"revision":1,"description":"","path":"","removed":false}
 m@k:~/grafana$ 
 m@k:~/grafana$
+~~~
 
 
 
 
-
-** Step 30:-**
+**Step 28:-**
 
 ~~~
 cd
@@ -4292,7 +4292,6 @@ m@k:~$ podman exec -it timescale-postgres bash
 bash-5.1# 
 bash-5.1# 
 ~~~
-
 
 **Step 31:-**
 
@@ -4344,7 +4343,6 @@ postgres=#
 select * from user_count;
 ~~~
 
-
 #### OUTPUT
 
 ~~~
@@ -4378,16 +4376,17 @@ Locust ui exposed to the localhost:8089 Start a new test with the number of user
 
 
 
-![](locustvi.png)
+![locustvi](locustvi.png)
 
 **Step 36:-**
 
 You can add panels in grafana to get the graphical view of the responses.
 
-![](grafana.png)
+![grafana](grafana.png)
 
 
 #### OUTPUT
+
 ~~~
 m@k:~$ 
 m@k:~$ podman run -itd --name loadtesting -p 8089:8089 -v /home/m/locust:/mnt/locust localhost/loadtest:v1 -f /mnt/locust/locustfile.py --timescale --grafana-url=http:/192.168.122.106:3000 --pghost=192.168.122.106 --pgport=5432 --pgpassword=password --pguser=postgres
