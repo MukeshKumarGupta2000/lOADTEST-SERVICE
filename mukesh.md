@@ -58,7 +58,7 @@ Hypervisor vendor:                  KVM
 #### **6:-Definition of tools:-** 
 
 
-**(a). Grafana** is a multi-platform open source analytics and interactive visualisation web application. It provides charts, graphs, and alerts for the web when connected to supported data sources. It can be easily installed using Docker or Docker Compose.
+**(a). Grafana** is a multi-platform open source analytics and interactive visualisation web application. It provides charts, graphs, and alerts for the web when connected to supported data sources. 
 PostgreSQL:   Post
 
 
